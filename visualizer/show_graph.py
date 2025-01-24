@@ -49,7 +49,7 @@ def startAlgorithm():
 
     drawData(array)
 
-    bubble_sort(array, drawData, 0.01)
+    bubble_sort(array, drawData, 1000)
 
     # generate(array)
 
