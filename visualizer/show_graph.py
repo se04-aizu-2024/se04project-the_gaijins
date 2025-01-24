@@ -22,8 +22,22 @@ from Sorting_algorithms import *
 
 # passed_algorithm = "Selection Sort"
 
-def start_visualizer(array, sorting_algorithm_type, interval):
-    global timeTick 
+def start_visualizer(root, array, sorting_algorithm_type, interval):
+    global timeTick
+    global newWindow
+    global canvas
+
+    newWindow = Toplevel(root)
+    newWindow.title("Sorting Algorithm Visualizer")
+    newWindow.geometry("900x600+200+80")
+    newWindow.config(bg='black')
+
+    mainlabel = Label(newWindow, text="Sorting Algorithm Visualizer", font=('arial', 20, 'bold'), bg='black', fg='white')
+    mainlabel.place(x=10, y=10)
+
+    canvas = Canvas(newWindow, width=870, height=450, bg='white')
+    canvas.place(x=10, y=70)
+
     timeTick = interval
     startAlgorithm(array, sorting_algorithm_type)
 
@@ -37,17 +51,7 @@ Algorithms = {
     "Selection Sort" : selection_sort,
 }
 
-root = Tk()
-root.title("Sorting Algorithm Visualizer")
-root.geometry("900x600+200+80")
-root.config(bg='black')
-
-array = [random.randint(1, 100) for i in range(50)]
-
-mainlabel = Label(root, text="Sorting Algorithm Visualizer", font=('arial', 20, 'bold'), bg='black', fg='white')
-mainlabel.place(x=10, y=10)
-
-def drawData(array, colorArray=['red' for i in range(len(array))]):
+def drawData(array):
     global canvas
     canvas.delete("all")
     c_height = 450
@@ -65,36 +69,20 @@ def drawData(array, colorArray=['red' for i in range(len(array))]):
         print(x0, y0, x1, y1)
         canvas.create_rectangle(x0, y0, x1, y1, fill="red")
         canvas.create_text(x0 + 2, y0, anchor=S, text=str(array[i]))
-    root.update()
-
-
-def generate(array):
-    colorArray = ['red' for i in range(len(array))]
-    drawData(array, colorArray)
-
+    newWindow.update()
 
 def startAlgorithm(array, passed_algorithm):
-    generate(array)
+    drawData(array)
     time.sleep(1.5)
 
     Algorithms[passed_algorithm](array, drawData, timeTick)
 
     # generate(array)
 
-canvas = Canvas(root, width=870, height=450, bg='white')
-canvas.place(x=10, y=70)
+
 
 
 # time.sleep(1)
 
-start = Button(root, text="Start",bg="blue", relief=SUNKEN, activebackground="blue", activeforeground="yellow", bd=5, width=10, command=startAlgorithm)
-start.place(x=750, y=0)
-
-# startAlgorithm()
-
-
-root.mainloop()
-
-
-
-
+# start = Button(root, text="Start",bg="blue", relief=SUNKEN, activebackground="blue", activeforeground="yellow", bd=5, width=10, command=startAlgorithm)
+# start.place(x=750, y=0)

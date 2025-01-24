@@ -1,6 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from tkinter import *
 from tkinter import ttk
 import random
+from visualizer import *
 
 # The original window
 root = Tk()
@@ -10,8 +15,6 @@ root.geometry("900x500+200+80")
 root.title("Sorting Algorithm Visualizer")
 # Color of background
 root.config(bg="#082A46")
-
-# run( start_visualizer(arr, sorting_algorithm_type))
 
 # Variables that will be used
 sorting_algs = [ # All sorting algorithm
@@ -25,11 +28,6 @@ sorting_algs = [ # All sorting algorithm
     "Selection Sort"
 ]
 selected_algorithm = StringVar() # The algorithm that the current display shows
-
-# Function that will be used
-def start_visualizer(input, alg):
-    print(input)
-    print(alg)
 
 def GetData():
     return list(map(int, inputtxt.get("1.0", "end-1c").split(" ")))
@@ -122,7 +120,7 @@ inputtxt.place(x=10, y=130)
 
 # Start sorting button
 start = Button(root, text="Start", bg="#C45B09", font=("arial", 12, "italic bold"), relief=SUNKEN,
-               activebackground="#059458", activeforeground="white", bd=5, width=10, command=lambda: start_visualizer(GetData(), selected_algorithm.get(), speedscale.get()))
+               activebackground="#059458", activeforeground="white", bd=5, width=10, command=lambda: start_visualizer(root, GetData(), selected_algorithm.get(), speedscale.get()))
 start.place(x=750, y=0)
 
 # Let the window exists continuously
