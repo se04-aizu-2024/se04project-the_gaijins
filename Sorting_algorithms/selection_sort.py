@@ -1,6 +1,7 @@
+import time
 # selection sort of one dimensional array
 
-def selection_sort(arr):
+def selection_sort(arr, drawData, timeTick):
     n = len(arr)
     for i in range(n):
         min_idx = i
@@ -8,4 +9,6 @@ def selection_sort(arr):
             if arr[min_idx] > arr[j]:
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
+        drawData(arr)
+        time.sleep(timeTick)
     return arr
