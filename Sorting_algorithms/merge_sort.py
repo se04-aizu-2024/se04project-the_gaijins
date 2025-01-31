@@ -1,6 +1,6 @@
 import time
 
-# # merge sort of one dimensional array
+# merge sort of one dimensional array
 
 
 def merge_sort(arr, drawData, timeTick):
@@ -24,7 +24,7 @@ def mergesort(arr, left, right, drawData, timeTick):
             if arr[left] <= arr[j]:
                 left += 1
             else:
-                colorArray = ["green" if x == j else "red" for x in range(len(arr))]
+                # colorArray = ["green" if x == j else "red" for x in range(len(arr))]
                 drawData(arr, colorArray=colorArray)
                 time.sleep(timeTick)
                 temp = arr[j]
@@ -45,9 +45,61 @@ def mergesort(arr, left, right, drawData, timeTick):
                 # this process is much like insertion sort
                 arr[left] = temp
 
-                colorArray = ["green" if x == left else "red" for x in range(len(arr))]
+                # colorArray = ["green" if x == left else "red" for x in range(len(arr))]
                 drawData(arr, colorArray=colorArray)
                 time.sleep(timeTick)
                 left += 1
                 m += 1
                 j += 1
+
+
+# def merge_sort(data, drawData, timeTick):
+#     merge_sort_algo(data, 0, len(data), drawData, timeTick)
+
+# def merge_sort_algo(data, left, right, drawData, timeTick):
+#     if left < right:
+#         middle = (left + right) // 2
+#         merge_sort_algo(data, left, middle, drawData, timeTick)
+#         merge_sort_algo(data, middle + 1, right, drawData, timeTick)
+#         merge(data, left, middle, right, drawData, timeTick)
+
+# def merge(data, left, middle, right, drawData, timeTick):
+
+#     drawData(data, colorArray(len(data), left, middle, right))
+#     time.sleep(timeTick)
+
+#     leftpart = data[left:middle + 1]
+#     rightpart = data[middle + 1: right + 1]
+
+#     leftIdx = rightIdx = 0
+
+#     for dataIdx in range(left, right):
+#         if leftIdx < len(leftpart) and rightIdx < len(rightpart):
+#             if leftpart[leftIdx] <= rightpart[rightIdx]:
+#                 data[dataIdx] = leftpart[leftIdx]
+#                 leftIdx += 1
+#             else:
+#                 data[dataIdx] = rightpart[rightIdx]
+#                 rightIdx += 1
+#         elif leftIdx < len(leftpart):
+#             data[dataIdx] = leftpart[leftIdx]
+#             leftIdx += 1
+#         else:
+#             data[dataIdx] = rightpart[rightIdx]
+#             rightIdx += 1
+
+#     drawData(data, colorArray = ["green" if x >= left and x <= right else "red" for x in range(len(data))])
+#     time.sleep(timeTick)
+
+# def colorArray(length, left, middle, right):
+#     colorArray = []
+
+#     for i in range(length):
+#         if left <= i and i <= right:
+#             if left <= i and i <= middle:
+#                 colorArray.append("red")
+#             else:
+#                 colorArray.append("green")
+#         else:
+#             colorArray.append("green")
+#     return colorArray

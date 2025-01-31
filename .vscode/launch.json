@@ -15,7 +15,7 @@
             "name": "launch Program",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/GUI_static/open_pop_up.py",
+            "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal"
         }
     ]
