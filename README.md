@@ -9,8 +9,13 @@
 
 ## Process to run locally
 
-    - install pipenv using the following command:
+- install pipenv using the following command:
         
-```terminal
+```console
 pip install pipenv  
+```
+
+- Download the necessary dependancies using the following command:
+
+```console
 ```
