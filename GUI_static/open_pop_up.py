@@ -25,7 +25,6 @@ def main_GUI():
         "Heap Sort",
         "Insert Sort",
         "Merge Sort",
-        # "Do you need this Sort",
         "Quick Sort",
         "Radix Sort",
         "Selection Sort",
