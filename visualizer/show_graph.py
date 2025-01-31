@@ -16,12 +16,10 @@ from Sorting_algorithms import *
 #     - heap sort: "Heap Sort"
 #     - insert sort: "Insert Sort"
 #     - merge sort: "Merge Sort"
-#     - miracle sort: "Do we need this Sort"
 #     - quick sort: "Quick Sort"
 #     - radix sort: "Radix Sort"
 #     - selection sort: "Selection Sort"
 
-# passed_algorithm = "Selection Sort"
 
 
 def start_visualizer(root, array, sorting_algorithm_type, interval):
