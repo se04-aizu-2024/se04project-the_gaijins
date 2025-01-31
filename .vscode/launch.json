@@ -12,10 +12,10 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "launch visualizer",
+            "name": "launch Program",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/visualizer/show_graph.py",
+            "program": "${workspaceFolder}/GUI_static/open_pop_up.py",
             "console": "integratedTerminal"
         }
     ]
