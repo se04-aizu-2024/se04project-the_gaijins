@@ -13,3 +13,4 @@ def bubble_sort(arr, drawData, timeTick):
                 colorArray = ["green" if x == j or x == j + 1 else "red" for x in range(len(arr))]
                 drawData(arr, colorArray=colorArray)
                 time.sleep(timeTick)
+
