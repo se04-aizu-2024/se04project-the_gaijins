@@ -19,7 +19,7 @@
 - install pipenv using the following command:
         
 ```console
-pip3 install pipenv
+    pip3 install pipenv
 ```
 
 - Download the necessary dependancies using the following commands:
@@ -33,24 +33,24 @@ pip3 install pipenv
 - Run the File
 
 ```console
-python3 main.py
+    python3 main.py
 ```
 
 ## How to recreate the Executable:
 
 ```console
-pyinstaller --onefile main.py
+    pyinstaller --onefile main.py
 ```
 
 
 ## Available Algorithms:
 
-- bubble sort: "Bubble Sort"
-- heap sort: "Heap Sort"
-- insert sort: "Insert Sort"
-- merge sort: "Merge Sort"
-- quick sort: "Quick Sort"
-- radix sort: "Radix Sort"
-- selection sort: "Selection Sort"
+- bubble sort
+- heap sort
+- insert sort
+- merge sort
+- quick sort
+- radix sort
+- selection sort
 
 
