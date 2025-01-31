@@ -16,6 +16,9 @@
 
 ## Process to run locally
 
+
+*Note it is recommended to perform the following in a virtual python environment with the pip updated and upgraded
+
 - install pipenv using the following command:
         
 ```console
@@ -23,8 +26,6 @@
 ```
 
 - Download the necessary dependancies using the following commands:
-
-*Note it is recommended to perform the following in a virtual python environment with the pip updated and upgraded
 
 ```console
     pipenv install --system
